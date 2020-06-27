@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+body {
+    background-image: url('img/bg.jpeg');
+}
+
+section {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 30%;
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #ffff88;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    float: left;
+    margin-left: 20px;
+}
+
+li {
+    text-decoration: underline;
+    background-color: #ebeb26;
+    padding: 5px;
+    margin: 10px;
+}
+
+button {
+    float: right;
+    margin-right: 10px;
+}
+
+#addToList:hover {
+    background-color: lightgreen;
+}
+
+#delete:hover {
+    background-color: red;
+}
