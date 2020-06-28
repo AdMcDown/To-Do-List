@@ -64,5 +64,6 @@ function modify(e) {
         current.setAttribute('style', 'text-decoration: underline; color: black');
         lists.insertBefore(current, lists.firstChild);
         check.setAttribute('name', 'unchecked');
-    }
+        document.getElementById("mistake").play();
+    } //added sound for if you unckeck something it says oops! i had lots of fun with sounds stuff :P
 }

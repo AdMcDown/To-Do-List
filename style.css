@@ -1,9 +1,12 @@
+/* the basic idea i had for my css is to make the to do list look like a note pad! i think i did a good job and added a background just to make the website look good! */
+
 @charset "utf-8";
 
 body {
     background-image: url('img/bg.jpeg');
 }
 
+/* made section to make it like not pad */
 section {
     margin-top: 20px;
     margin-left: 20px;
