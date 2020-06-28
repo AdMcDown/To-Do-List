@@ -33,10 +33,12 @@ function AddToList(e) {
 function Delete(e) {
     let neerLi = e.target.closest('li');
     neerLi.remove();
+    document.getElementById("deadly").play();
 }
 
 function modify(e) {
     let current = e.target.closest('li');
     current.setAttribute('style', 'text-decoration: line-through; color: red');
     lists.appendChild(current);
+    document.getElementById("check").play();
 }
