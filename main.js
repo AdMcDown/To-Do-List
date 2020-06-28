@@ -10,35 +10,59 @@ addButton.onclick = AddToList;
 function AddToList(e) {
     e.preventDefault();
     let listItem = toDoItem.value;
-    let li = document.createElement('li');
-    let checkbox = document.createElement('input');
-    let del = document.createElement('button');
 
-    del.textContent = 'Delete';
-    del.setAttribute('id', 'delete');
+    if (listItem.trim()) { //Simple if statement to check that the user actuall added text! the trim makes it so they cant just put a bunch of spaces!
 
-    checkbox.setAttribute('type', 'checkbox');
-    li.setAttribute('id', listItem);
-    li.appendChild(checkbox);
-    li.textContent = '  ' + listItem + '  ';
+        //create my three elements
+        let li = document.createElement('li');
+        let checkbox = document.createElement('input');
+        let del = document.createElement('button');
 
-    lists.appendChild(li);
-    li.insertBefore(checkbox, li.firstChild);
-    li.appendChild(del);
+        //Add some attributes and text, including text in input
+        del.textContent = 'Delete';
+        del.setAttribute('id', 'delete');
+        checkbox.setAttribute('type', 'checkbox');
+        checkbox.setAttribute('name', 'unchecked');
+        li.setAttribute('id', listItem);
+        li.appendChild(checkbox);
+        li.textContent = '  ' + listItem + '  ';
 
-    del.onclick = Delete;
-    checkbox.addEventListener('change', modify);
+        //inserts and appends! id did an insert before for the li, this makes it so the new item comes in at the top instead of under ones already checked off! looks better basiclly!
+        lists.insertBefore(li, lists.firstChild);
+        li.insertBefore(checkbox, li.firstChild);
+        li.appendChild(del);
+
+        //delete button and checkbox listener. P.S u might not want to delete anything.... u have been warned :p
+        del.onclick = Delete;
+        checkbox.addEventListener('change', modify);
+
+    } else { //alert system incase they dont add any text and hit the add button!
+        alert("You can not leave your to do list empty!");
+    }
+
 }
 
+//my delete function, give it a short if your dare!
 function Delete(e) {
     let neerLi = e.target.closest('li');
     neerLi.remove();
     document.getElementById("deadly").play();
 }
 
+//modifies my li when checkbox is clicked
 function modify(e) {
+    let check = e.target.closest('input');
     let current = e.target.closest('li');
-    current.setAttribute('style', 'text-decoration: line-through; color: red');
-    lists.appendChild(current);
-    document.getElementById("check").play();
+
+    //added bit more take make this so they can uncheck and it will go back to noraml!
+    if (check.name == "unchecked") {
+        current.setAttribute('style', 'text-decoration: line-through; color: red');
+        lists.appendChild(current);
+        document.getElementById("check").play();
+        check.setAttribute('name', 'checked');
+    } else {
+        current.setAttribute('style', 'text-decoration: underline; color: black');
+        lists.insertBefore(current, lists.firstChild);
+        check.setAttribute('name', 'unchecked');
+    }
 }
