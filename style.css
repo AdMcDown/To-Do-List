@@ -5,22 +5,31 @@
 body {
     background-image: url('img/bg.jpeg');
     display: flex;
-    justify-content: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10rem;
 }
 
-/* made section to make it like not pad */
+/* sections to make not pads */
 section {
-    /* margin-top: 20px;
-    margin-left: 20px; */
-
     width: 500px;
     max-width: 500px;
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: rgb(255, 255, 136, 0.5);
+    height: fit-content;
+}
+
+#notePad {
+    background-color: rgb(255, 255, 136, 0.6);
+}
+
+#commonGorceries {
+    background-color: rgb(173, 216, 230, 0.6);
+    color: darkgreen;
+}
+
+#commonWorkouts {
+    background-color: rgb(144, 238, 144, 0.6);
+    color: darkblue;
 }
 
 form {
