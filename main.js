@@ -14,7 +14,6 @@ function AddToList(e) {
     e.preventDefault();
     let listItem = toDoItem.value;
     let ItemTitle = itemTitle.value;
-    console.log(ItemTitle);
 
     if (listItem.trim()) { //Simple if statement to check that the user actuall added text! the trim makes it so they cant just put a bunch of spaces!
 
@@ -82,7 +81,7 @@ function modify(e) {
         document.getElementById("check").play();
         check.setAttribute('name', 'checked');
     } else {
-        current.setAttribute('style', 'text-decoration: underline; color: black');
+        current.setAttribute('style', 'color: black');
         ol.insertBefore(current, ol.firstChild);
         check.setAttribute('name', 'unchecked');
         document.getElementById("mistake").play();
