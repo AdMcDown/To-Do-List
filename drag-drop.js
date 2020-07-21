@@ -104,19 +104,3 @@ function dragOut(e) {
         e.target.style.background = 'rgb(255, 255, 136, 0.6)';
     }
 }
-
-// document.addEventListener("dragenter", function(event) {
-//     // highlight potential drop target when the draggable element enters it
-//     if (event.target.className == "dropzone") {
-//       event.target.style.background = "purple";
-//     }
-
-//   }, false);
-
-//   document.addEventListener("dragleave", function(event) {
-//     // reset background of potential drop target when the draggable element leaves it
-//     if (event.target.className == "dropzone") {
-//       event.target.style.background = "";
-//     }
-
-//   }, false);
