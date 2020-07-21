@@ -1,7 +1,10 @@
 //let statements 
 let toDoItem = document.getElementById('toDo');
+let itemTitle = document.getElementById('listTypes');
 let addButton = document.getElementById('addToList');
-let lists = document.getElementById('lists');
+let gro = document.getElementById('Groceries');
+let work = document.getElementById('Workouts');
+let oth = document.getElementById('Other');
 
 
 //Add to the list
@@ -10,6 +13,8 @@ addButton.onclick = AddToList;
 function AddToList(e) {
     e.preventDefault();
     let listItem = toDoItem.value;
+    let ItemTitle = itemTitle.value;
+    console.log(ItemTitle);
 
     if (listItem.trim()) { //Simple if statement to check that the user actuall added text! the trim makes it so they cant just put a bunch of spaces!
 
@@ -28,9 +33,23 @@ function AddToList(e) {
         li.textContent = '  ' + listItem + '  ';
 
         //inserts and appends! id did an insert before for the li, this makes it so the new item comes in at the top instead of under ones already checked off! looks better basiclly!
-        lists.insertBefore(li, lists.firstChild);
-        li.insertBefore(checkbox, li.firstChild);
-        li.appendChild(del);
+        //sorts the items into there sections
+        if (ItemTitle == "groceries") {
+            gro.insertBefore(li, gro.firstChild);
+            li.insertBefore(checkbox, li.firstChild);
+            li.appendChild(del);
+        } else if (ItemTitle == "workout") {
+            work.insertBefore(li, work.firstChild);
+            li.insertBefore(checkbox, li.firstChild);
+            li.appendChild(del);
+        } else {
+            oth.insertBefore(li, oth.firstChild);
+            li.insertBefore(checkbox, li.firstChild);
+            li.appendChild(del);
+
+        }
+
+
 
         //delete button and checkbox listener. P.S u might not want to delete anything.... u have been warned :p
         del.onclick = Delete;
@@ -53,16 +72,18 @@ function Delete(e) {
 function modify(e) {
     let check = e.target.closest('input');
     let current = e.target.closest('li');
+    let ol = e.target.closest('ol');
 
     //added bit more take make this so they can uncheck and it will go back to noraml!
+    //messed with this more so it moves the right item within the right list
     if (check.name == "unchecked") {
         current.setAttribute('style', 'text-decoration: line-through; color: red');
-        lists.appendChild(current);
+        ol.appendChild(current);
         document.getElementById("check").play();
         check.setAttribute('name', 'checked');
     } else {
         current.setAttribute('style', 'text-decoration: underline; color: black');
-        lists.insertBefore(current, lists.firstChild);
+        ol.insertBefore(current, ol.firstChild);
         check.setAttribute('name', 'unchecked');
         document.getElementById("mistake").play();
     } //added sound for if you unckeck something it says oops! i had lots of fun with sounds stuff :P
