@@ -17,8 +17,12 @@
     <header>
         <nav>
             <ul>
-                <li>Welcome</li>
-                <li><button id="fb-login">Login</button></li>
+                <li style="font-size: 25px;">Welcome</li>
+                <li>
+                    <fb:login-button id="fb-login" scope="public_profile,email" onlogin="checkLoginState();">
+                        Login
+                    </fb:login-button>
+                </li>
             </ul>
         </nav>
     </header>
