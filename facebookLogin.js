@@ -53,7 +53,7 @@
            login.setAttribute('style', 'display: none;');
        } else {
            logot.setAttribute('style', 'display: none;');
-           login.setAttribute('style', 'display: block;');
+           login.setAttribute('style', 'display: block; color: white; text-decoration: none;');
            welcome.textContent = 'Welcome';
        }
    }
