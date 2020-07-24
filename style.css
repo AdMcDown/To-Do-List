@@ -4,6 +4,9 @@
 
 body {
     background-image: url('img/bg.jpeg');
+}
+
+div {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10rem;
@@ -61,10 +64,43 @@ button {
     margin-right: 10px;
 }
 
+
+
 #addToList:hover {
     background-color: lightgreen;
 }
 
 #delete:hover {
     background-color: red;
+}
+
+/* navbar */
+
+#fb-login {
+    float: right;
+    margin-right: 20px;
+}
+
+header {
+    position: top;
+    text-align: center;
+    color: white;
+}
+
+nav {
+    border: 2px solid red;
+    z-index: 1;
+}
+
+nav ul {
+    padding: 5px;
+    margin: 0 auto;
+    background-color: darkblue;
+    list-style-type: none;
+    border: none;
+}
+
+nav ul li {
+    border: none;
+    display: inline;
 }

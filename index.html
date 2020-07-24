@@ -10,60 +10,71 @@
     <link rel="stylesheet" href="style.css">
     <script src="main.js" async></script>
     <script src="drag-drop.js" async></script>
+    <script src="facebookLogin.js" async></script>
 </head>
 
 <body>
-    <section id="commonWorkouts">
-        <h1>Common Workouts List</h1>
-        <ul id="Wul">
-            <li id="30min Ab Buster" name="workout">30min Ab Buster</li>
-            <li id="100 Squats" name="workout">100 Squats</li>
-            <li id="50 Push ups" name="workout">50 Push ups</li>
-            <li id="15min Skip Rope" name="workout">15min Skip Rope</li>
-            <li id="50 High Knees" name="workout">50 High Knees</li>
-        </ul>
-    </section>
-    <section id="notePad" class="notePad">
-        <h1>My To Do List</h1>
-        <form>
-            <input type="text" id="toDo" name="toDo" placeholder="To Do">
-            <label for="listTypes">Type:</label>
-            <select id="listTypes" name="listTypes">
-                <option value="groceries">Groceries</option>
-                <option value="workout">Workout</option>
-                <option value="other">Other</option>
-            </select>
-            <button id="addToList" name="addToList">Add To List</button>
-        </form>
-        <br>
-        <h4>Groceries:</h4>
-        <ol id="Groceries" name="Groceries">
-            <!-- Created to add list in -->
-        </ol>
-        <h4>Workouts:</h4>
-        <ol id="Workouts" name="Workouts">
-            <!-- Created to add list in -->
-        </ol>
-        <h4>Other:</h4>
-        <ol id="Other" name="Other">
-            <!-- Created to add list in -->
-        </ol>
-    </section>
-    <section class="grocery" id="commonGorceries">
-        <h1>Common Groceries List</h1>
-        <ul id="Gul">
-            <li>Milk</li>
-            <li>White Bread</li>
-            <li>Eggs</li>
-            <li>Margarita Mix</li>
-            <li>GARLIC</li>
-            <li>pumkin</li>
-            <li>Beer</li>
-            <li>Cheese that smells like feet</li>
-            <li>1 olive</li>
-            <li>CHIPS</li>
-        </ul>
-    </section>
+    <header>
+        <nav>
+            <ul>
+                <li>Welcome</li>
+                <li><button id="fb-login">Login</button></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <section id="commonWorkouts">
+            <h1>Common Workouts List</h1>
+            <ul id="Wul">
+                <li id="30min Ab Buster" name="workout">30min Ab Buster</li>
+                <li id="100 Squats" name="workout">100 Squats</li>
+                <li id="50 Push ups" name="workout">50 Push ups</li>
+                <li id="15min Skip Rope" name="workout">15min Skip Rope</li>
+                <li id="50 High Knees" name="workout">50 High Knees</li>
+            </ul>
+        </section>
+        <section id="notePad" class="notePad">
+            <h1>My To Do List</h1>
+            <form>
+                <input type="text" id="toDo" name="toDo" placeholder="To Do">
+                <label for="listTypes">Type:</label>
+                <select id="listTypes" name="listTypes">
+                    <option value="groceries">Groceries</option>
+                    <option value="workout">Workout</option>
+                    <option value="other">Other</option>
+                </select>
+                <button id="addToList" name="addToList">Add To List</button>
+            </form>
+            <br>
+            <h4>Groceries:</h4>
+            <ol id="Groceries" name="Groceries">
+                <!-- Created to add list in -->
+            </ol>
+            <h4>Workouts:</h4>
+            <ol id="Workouts" name="Workouts">
+                <!-- Created to add list in -->
+            </ol>
+            <h4>Other:</h4>
+            <ol id="Other" name="Other">
+                <!-- Created to add list in -->
+            </ol>
+        </section>
+        <section class="grocery" id="commonGorceries">
+            <h1>Common Groceries List</h1>
+            <ul id="Gul">
+                <li>Milk</li>
+                <li>White Bread</li>
+                <li>Eggs</li>
+                <li>Margarita Mix</li>
+                <li>GARLIC</li>
+                <li>pumkin</li>
+                <li>Beer</li>
+                <li>Cheese that smells like feet</li>
+                <li>1 olive</li>
+                <li>CHIPS</li>
+            </ul>
+        </section>
+    </div>
     <!-- sources for my sound which are in the sound folder in this project -->
     <audio id="check" src="sound/ding.wav" type="audio/wave"></audio>
     <audio id="deadly" src="sound/perfect-fart.mp3" type="audio/mp3"></audio>
