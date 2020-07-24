@@ -51,7 +51,6 @@
        if (isLoggedIn) {
            logot.setAttribute('style', 'display: block;');
            login.setAttribute('style', 'display: none;');
-           welcome.textContent = 'Hello ';
        } else {
            logot.setAttribute('style', 'display: none;');
            login.setAttribute('style', 'display: block;');
@@ -62,6 +61,7 @@
    function info() {
        FB.api('/me?field=name', function (response) {
            if (response && !response.error) {
+               welcome.textContent = 'Hello ' + response.name;
                console.log(response.name);
            }
        });
