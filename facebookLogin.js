@@ -53,11 +53,11 @@
    //displays login, logout and welcome at appropriate times, meaning if your logged in or not
    function log(isLoggedIn) {
        if (isLoggedIn) {
-           logot.setAttribute('style', 'display: block;');
+           logot.setAttribute('style', 'display: block; color: white; text-decoration: none;');
            login.setAttribute('style', 'display: none;');
        } else {
            logot.setAttribute('style', 'display: none;');
-           login.setAttribute('style', 'display: block; color: white; text-decoration: none;');
+           login.setAttribute('style', 'display: block;');
            welcome.textContent = 'Welcome';
        }
    }
