@@ -62,7 +62,7 @@
    function info() {
        FB.api('/me?field=name', function (response) {
            if (response && !response.error) {
-               console.log(response);
+               console.log(response.name);
            }
        });
    }
