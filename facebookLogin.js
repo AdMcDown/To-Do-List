@@ -58,6 +58,7 @@
        } else {
            logot.setAttribute('style', 'display: none;');
            login.setAttribute('style', 'display: block;');
+           welcome.setAttribute('class', 'Logged Out');
            welcome.textContent = '\'Welcome\' - Please Login';
        }
    }
@@ -67,6 +68,7 @@
            //grabs the response and get the name value to set to the welcome screen
            if (response && !response.error) {
                welcome.textContent = 'Hello ' + response.name;
+               welcome.setAttribute('class', 'Logged In');
            }
        });
    }
