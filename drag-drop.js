@@ -32,7 +32,11 @@ notePad.setAttribute('ondragleave', 'dragOut(event)');
 
 //simple drag function, allows draging of targeted item
 function dragging(e) {
-    e.dataTransfer.setData('text', e.target.id);
+    if (log()) {
+        e.dataTransfer.setData('text', e.target.id);
+    } else {
+        alert("You must Login to facebook at access your to do list");
+    }
 }
 
 function drop(e) {

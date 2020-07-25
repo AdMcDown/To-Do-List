@@ -58,7 +58,7 @@
        } else {
            logot.setAttribute('style', 'display: none;');
            login.setAttribute('style', 'display: block;');
-           welcome.textContent = 'Welcome';
+           welcome.textContent = '\'Welcome\' - Please Login';
        }
    }
 
