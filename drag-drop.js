@@ -32,6 +32,7 @@ notePad.setAttribute('ondragleave', 'dragOut(event)');
 
 //simple drag function, allows draging of targeted item
 function dragging(e) {
+    e.preventDefault();
     if (log()) {
         e.dataTransfer.setData('text', e.target.id);
     } else {
