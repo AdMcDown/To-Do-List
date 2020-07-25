@@ -60,6 +60,10 @@
            login.setAttribute('style', 'display: block;');
            welcome.setAttribute('class', 'Logged Out');
            welcome.textContent = '\'Welcome\' - Please Login';
+
+           //added this to empty the ordered lists when you logout
+           let allOl = document.querySelectorAll('ol');
+           allOl.empty();
        }
    }
 
