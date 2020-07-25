@@ -35,7 +35,7 @@ function dragging(e) {
     if (welcome.className == "Logged In") {
         e.dataTransfer.setData('text', e.target.id);
     } else {
-        alert("You must Login to facebook at access your to do list");
+        alert("You must Login to facebook to access your to do list");
     }
 }
 

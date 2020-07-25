@@ -63,7 +63,7 @@
 
            //added this to empty the ordered lists when you logout
            let allOl = document.querySelectorAll('ol');
-           allOl.empty();
+
        }
    }
 

@@ -59,7 +59,7 @@ function AddToList(e) {
             alert("You can not leave your to do list empty!");
         }
     } else {
-        alert("You must Login to facebook at access your to do list");
+        alert("You must Login to facebook to access your to do list");
     }
 }
 
