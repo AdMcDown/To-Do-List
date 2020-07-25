@@ -63,14 +63,11 @@
 
            //added this to empty the ordered lists when you logout
            let olList = document.querySelectorAll('ol');
-           console.log(olList);
            for (let o = 0; o < olList.length; o++) {
                let liList = olList[o].getElementsByTagName("li");
                for (let l = 0; l < liList.length; l++) {
-                   console.log(liList[l]);
                    liList[l].remove();
                }
-               console.log(olList[o]);
            }
        }
    }
