@@ -58,7 +58,7 @@
        } else {
            logot.setAttribute('style', 'display: none;');
            login.setAttribute('style', 'display: block;');
-           welcome.setAttribute('class', 'Logged In');
+           welcome.setAttribute('class', 'Logged In'); // personal no te!!! changed from 'Logged Out' so website will functions without having to log in to facebook
            welcome.textContent = '\'Welcome\' - Please Login';
 
            //added this to empty the ordered lists when you logout
