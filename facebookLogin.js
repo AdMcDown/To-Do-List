@@ -6,6 +6,10 @@
    let logot = document.getElementById('logout');
    let welcome = document.getElementById('welcome');
 
+   // add this so it remains as if it was logged in
+   // facebook is no longer allowing access for this webiste for loggins, therefore need to adjust it
+   welcome.setAttribute('class', 'Logged In');
+
    //loads the SDK
    window.fbAsyncInit = function () {
        FB.init({
