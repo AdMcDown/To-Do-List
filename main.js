@@ -15,8 +15,7 @@ function AddToList(e) {
     let listItem = toDoItem.value;
     let ItemTitle = itemTitle.value;
 
-    //orginally said if (welcome.className == "Logged In"), but facebook no longer allowing login on my site
-    if (true) {
+    if (welcome.className == "Logged In") {
         if (listItem.trim()) { //Simple if statement to check that the user actuall added text! the trim makes it so they cant just put a bunch of spaces!
 
             //create my three elements

@@ -58,7 +58,7 @@
        } else {
            logot.setAttribute('style', 'display: none;');
            login.setAttribute('style', 'display: block;');
-           welcome.setAttribute('class', 'Logged Out');
+           welcome.setAttribute('class', 'Logged In');
            welcome.textContent = '\'Welcome\' - Please Login';
 
            //added this to empty the ordered lists when you logout
