@@ -8,7 +8,7 @@
 
    // add this so it remains as if it was logged in
    // facebook is no longer allowing access for this webiste for loggins, therefore need to adjust it
-   welcome.setAttribute('class', 'Logged In');
+   welcome.setAttribute('className', 'Logged In');
 
    //loads the SDK
    window.fbAsyncInit = function () {
@@ -81,7 +81,7 @@
            //grabs the response and get the name value to set to the welcome screen
            if (response && !response.error) {
                welcome.textContent = 'Hello ' + response.name;
-               welcome.setAttribute('class', 'Logged In');
+               welcome.setAttribute('className', 'Logged In');
            }
        });
    }

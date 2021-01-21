@@ -32,7 +32,7 @@ function AddToList(e) {
             li.appendChild(checkbox);
             li.textContent = '  ' + listItem + '  ';
 
-            //inserts and appends! id did an insert before for the li, this makes it so the new item comes in at the top instead of under ones already checked off! looks better basiclly!
+            //inserts and appends! i did an insert before for the li, this makes it so the new item comes in at the top instead of under ones already checked off! looks better basiclly!
             //sorts the items into there sections
             if (ItemTitle == "groceries") {
                 gro.insertBefore(li, gro.firstChild);
